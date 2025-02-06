@@ -1,0 +1,10 @@
+def f(m):
+    x = []
+    cat = str(input("Name of category: "))
+    for i in m:
+        if i["category"] == cat:
+            x.append(i)
+    for i in x:
+        print(f"Name: {i['name']}, IMDb: {i['imdb']}, Category: {i['category']}")
+
+f(movies)
