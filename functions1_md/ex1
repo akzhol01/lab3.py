@@ -1,10 +1,2 @@
-def f(m):
-    print("Name of film:")
-    name = str(input())
-    for i in m:
-        if i["name"] == name:
-            if i["imdb"] > 5.5:
-                return True
-    return False
-
-print(f(movies))
+def grams_to_ounces(grams):
+    return 28.3495231 * grams
