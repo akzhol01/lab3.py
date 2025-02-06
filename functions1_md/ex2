@@ -1,9 +1,2 @@
-def f(m):
-    more = []
-    for i in m:
-        if i["imdb"] > 5.5:
-            more.append(i)
-    for i in more:
-        print(f"Name: {i['name']}, IMDb: {i['imdb']}, Category: {i['category']}")
-
-f(movies)
+def fahrenheit_to_centigrade(fahrenheit):
+    return (5 / 9) * (fahrenheit - 32)
