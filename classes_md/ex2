@@ -1,0 +1,13 @@
+class Shape():
+    def area(self):
+        return 0
+class Square(Shape):
+    def __init__(self,leng:
+        self.len=len
+    def area(self):
+        return self.len ** 2
+q = float(input("a:"))
+m=Square(a)
+print("audany:",m.area())
+m=Shape()
+print("other:",m.area())
