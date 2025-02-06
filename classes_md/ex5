@@ -1,0 +1,29 @@
+class Bank:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+    def owner(self):
+        return self.name
+    def get_balance(self):  
+        return self.balance 
+    def deposit(self, amount):  
+        self.balance += amount 
+        return self.balance 
+    def withdraw(self, amount):  
+        if self.balance - amount < 0:
+            return "Қаражат жеткіліксіз"
+        else:
+            self.balance -= amount 
+            return self.balance  
+
+
+name = input("Owner :")
+many = float(input("balance:"))
+x = Bank(name, many)
+
+print(x.owner())
+print(x.get_balance())  
+sum = float(input("deposit:"))
+print(x.deposit(sum))
+minus = float(input("withdraw:"))
+print(x.withdraw(minus))
