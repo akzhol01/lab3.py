@@ -1,0 +1,14 @@
+name = str(input("Category: "))
+
+def imdb_point(movies):
+    avg = 0
+    cnt = 0
+    for movie in movies:
+        if movie["category"] == name:
+            avg += movie["imdb"]
+            cnt += 1
+    if cnt == 0:
+        return "No movies found in this category"
+    return avg / cnt
+
+print(imdb_point(movies))
