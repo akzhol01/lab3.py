@@ -1,0 +1,19 @@
+def imdb_point(movies, names):
+    sum = 0
+    cnt = 0
+    for movie in movies:
+        if movie["name"] in names:
+            sum += movie["imdb"]
+            cnt += 1
+    if cnt == 0:
+        return "No movies found."
+    return sum / cnt
+
+names = []
+while True:
+    name1 = input("Name of movie (or type 'done' to finish): ")
+    if name1.lower() == 'done':
+        break
+    names.append(name1)
+
+print(imdb_point(movies, names))
